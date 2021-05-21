@@ -5,14 +5,14 @@
   tasks:
   - name: check that python3 is installed on hosts
     raw: apk -U add python3
+  - name: chekc that apache2 is installed on hosts
+    apk:
+      name: apache2
+      state: latest
   - name: copy index.html into the hosts so it can be run with apache2
     template:
       src: index.html
       dest: /var/www/localhost/htdocs/index.html
-  - name: check that apache2 is installed on hosts
-    apk:
-      name: apache2
-      state: latest
   - name: restart the apache2 service
     service:
       name: apache2
