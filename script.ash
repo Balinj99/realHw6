@@ -21,7 +21,7 @@ ssh-copy-id -i /root/.ssh/id_rsa root@$host1
 ssh-copy-id -i /root/.ssh/id_rsa root@$host2
 
 #run the ansible playbook
-ansible-palybook playbook.yaml -i ./hosts.ini
+ansible-playbook playbook.yaml -i ./hosts.ini
 
 #return contents of index.html from index.html
 curl $host1 
