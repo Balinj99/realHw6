@@ -13,10 +13,6 @@
     template:
       src: index.html
       dest: /var/www/localhost/htdocs/index.html
-  - name: restart the apache2 service
-    service:
-      name: apache2
-      state: restarted
   - name: check that apache2 is running
     service:
       name: apache2
